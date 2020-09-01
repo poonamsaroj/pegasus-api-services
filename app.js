@@ -9,11 +9,7 @@ const app = express();
 // Here I have set limit of Request
 app.use(bodyParser.urlencoded({ limit: process.env.ReqSize, extended: true }));
 
-// parse requests of content-type - application/json
-//Here I have set limit of Request
-app.use(bodyParser.json({ limit: process.env.ReqSize, extended: true }));
-
-// Endpoint for saving and updting Vendor Details
+// Endpoint for finding category table
 let categoryController = require('./controllers/category.controller');
 app.use('/category', categoryController);
 
