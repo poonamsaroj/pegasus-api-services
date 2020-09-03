@@ -1,16 +1,21 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
-// const product = new Schema({
-//     productName: String,
-//     productType: String
-// });
   
 // Category model to mapping db values
 const category = new Schema({
-    _id: String,
-    categoryName: String,
-    product: Array
+    title: String,
+    complete: {
+        type: Boolean,
+        default: false
+    } ,
+    createdAt: {
+        type: Date,
+        default: Date.now 
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now 
+    }
 });
   
 mongoose.model('category', category);

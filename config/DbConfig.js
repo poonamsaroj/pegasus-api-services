@@ -7,7 +7,7 @@ const db = mongoose.connection;
 /**
  * @method mongoose.connect() - connecting to database
  */
-var connectionString = "mongodb://localhost:27017/appinessDb" 
+var connectionString = "mongodb://localhost:27017/pegasusDb" 
 mongoose.connect(connectionString);
 
  
